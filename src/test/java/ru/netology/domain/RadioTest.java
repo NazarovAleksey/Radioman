@@ -4,11 +4,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class RadioTest {
     @Test
     public void testMaxChannels() {
         Radio radio = new Radio();
         assertEquals(10, radio.getMaxChannels());
+    }
+
+    @Test
+    public void testAllArgsConstructor() {
+        Radio radio = new Radio(9, 10, 0, 0, 100, 0);
+        radio.nextRadiostation();
+        radio.volumeUp();
+        assertEquals(10, radio.getMaxChannels());
+        assertEquals(1, radio.getCurrentVolume());
     }
 
     @Test
