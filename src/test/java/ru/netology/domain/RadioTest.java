@@ -39,8 +39,6 @@ class RadioTest {
     public void shouldDecreaseChannel2() {
         Radio radio = new Radio(10,5);
         radio.prevRadiostation();
-        int expected = 4;
-        int actual = radio.getCurrentRadioStation();
         assertEquals(4, radio.getCurrentRadioStation());
     }
 
@@ -55,8 +53,6 @@ class RadioTest {
     public void shouldIncreaseVolume() {
         Radio radio = new Radio(9);
         radio.volumeUp();
-        int expected = 10;
-        int actual = radio.getCurrentVolume();
         assertEquals(10, radio.getCurrentVolume());
     }
 
